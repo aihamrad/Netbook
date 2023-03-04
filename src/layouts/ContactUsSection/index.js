@@ -1,16 +1,21 @@
 import { useState } from "react";
-import Button from "../../components/Button";
+import ContactForm from "../../components/ContactusForm";
 import emailjsHandler from "../../utils/emailjsHandler";
 
 const ContactUsSection = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [alreadySent, setAlreadySent] = useState(false);
+  const [submitDisabled, setSubmitDisabled] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setSubmitDisabled(true);
     emailjsHandler({ name, email, message }).then(
       () => {
+        setAlreadySent(true);
+        setSubmitDisabled(false);
         setName("");
         setEmail("");
         setMessage("");
@@ -25,38 +30,26 @@ const ContactUsSection = () => {
     <div className="background-header">
       <div className="container">
         <div className="py-20 flex justify-center max-md:py-5">
-          <form
-            onSubmit={handleSubmit}
-            className="contact-form p-11 box-m shadow background-white rounded-xl flex flex-col justify-center"
-          >
-            <p className="text-center mb-5 text-dark-blue text-semibold text-lg">
-              Please if you have any question <br /> Contact us
-            </p>
-            <input
-              type="text"
-              value={name}
-              placeholder={"Name"}
-              className="contact-input mb-5 py-3 px-1 border-grey rounded-xl"
-              onChange={(e) => setName(e.target.value)}
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              value={email}
-              className="contact-input mb-5 py-3 px-1 border-grey rounded-xl"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <textarea
-              value={message}
-              placeholder="Enter you message here..."
-              className="contact-input mb-5 py-3 px-1 border-grey rounded-xl"
-              rows={5}
-              onChange={(e) => setMessage(e.target.value)}
-            />
-            <Button type="submit" className="button-primary">
-              Send
-            </Button>
-          </form>
+          <div className="contact-form p-11 box-m shadow background-white rounded-xl ">
+            {!alreadySent ? (
+              <ContactForm
+                handleSubmit={handleSubmit}
+                name={name}
+                email={email}
+                message={message}
+                setName={setName}
+                setEmail={setEmail}
+                setMessage={setMessage}
+                submitDisabled={submitDisabled}
+              />
+            ) : (
+              <div>
+                <p className="text-bold text-primary text-center">
+                  We recived your message <br /> Thanks {":)"}
+                </p>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>
