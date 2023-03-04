@@ -36,6 +36,7 @@ const Navbar = () => {
           <div className="flex justify-start items-center ">
             {ButtonsList.map((el, index) => (
               <div
+                key={el.text}
                 className={`${index !== ButtonsList.length -1 ? 'mr-5' : ''} text-sm leading-3 cursor-pointer  ${
                   page === el.text ? "text-black font-semibold" : "text-grey font-normal"
                 }`}

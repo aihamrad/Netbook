@@ -30,7 +30,7 @@ const AchievementSection = () => {
             <div className="flex items-center justify-start mb-10">
               <div className="mr-4 flex">
                 {firstBoxImag.map((x) => (
-                  <div className="img-list">
+                  <div key={x.key} className="img-list">
                     <img key={x.key} src={x.img} alt={x.key} />{" "}
                   </div>
                 ))}
@@ -65,7 +65,7 @@ const AchievementSection = () => {
             <div className="flex items-center justify-start mb-10">
               <div className="mr-4 flex">
                 {secondBox.map((x) => (
-                  <div className="img-list">
+                  <div key={x.key} className="img-list">
                     <img key={x.key} src={x.img} alt={x.key} />{" "}
                   </div>
                 ))}
