@@ -36,7 +36,6 @@ const SearchInput = () => {
         results.push({ el: element, text: elementText });
       }
     }
-    console.log(results);
     return results;
   };
 
