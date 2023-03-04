@@ -38,7 +38,7 @@ const AchievementSection = () => {
               <div>
                 <p className="text-dark-grey-2 text-base">
                   <span className="text-primary text-semibold">+836k</span>{" "}
-                  <span>Memers</span>
+                  <span>Members</span>
                 </p>
               </div>
             </div>

@@ -22,7 +22,7 @@ const Navbar = () => {
         </div>
       );
     }
-    return <div>{item.text}</div>;
+    return <p>{item.text}</p>;
   };
 
 

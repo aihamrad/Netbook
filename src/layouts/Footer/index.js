@@ -22,10 +22,11 @@ const Footer = () => {
             <table className="mr-44 mb-10 w-[100%] ">
               <thead>
                 <tr>
-                  <th className="pb-6">Home</th>
-                  <th className="pb-6">Resources</th>
-                  <th className="pb-6">Community</th>
-                  <th className="pb-6">Main links</th>
+                  {["Home", "Resources", "Community", "links"].map((el) => (
+                    <th key={el} className="pb-6">
+                      <span>{el}</span>
+                    </th>
+                  ))}
                 </tr>
               </thead>
               <tbody>
@@ -35,7 +36,7 @@ const Footer = () => {
                       key={el}
                       className="text-center text-light-grey-2 pb-3 max-md:text-sm"
                     >
-                      <a href="/#">{el}</a>
+                      <a href="/#"><span>{el}</span></a>
                     </td>
                   ))}
                 </tr>
@@ -49,7 +50,7 @@ const Footer = () => {
                 <tr>
                   {["Events", "Guides", "Friends", "Groups"].map((el) => (
                     <td key={el} className="text-center pb-3 max-md:text-sm">
-                      <a href="/#">{el}</a>
+                     <a href="/#"><span>{el}</span></a>
                     </td>
                   ))}
                 </tr>
@@ -57,7 +58,7 @@ const Footer = () => {
                   {["Contact", "Help Center", "Forums", "Private Group"].map(
                     (el) => (
                       <td key={el} className="text-center max-md:text-sm">
-                        <a href="/#">{el}</a>
+                        <a href="/#"><span>{el}</span></a>
                       </td>
                     )
                   )}
