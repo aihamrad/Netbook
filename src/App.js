@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import HeaderSection from "./layouts/HeaderSection";
 import JoinNetworkSection from "./layouts/JoinNetworkSection";
 import AchievementSection from "./layouts/AchievementSection";
+import Footer from "./layouts/Footer";
 
 const App = () => {
   return (
@@ -19,6 +20,9 @@ const App = () => {
       <section>
         <AchievementSection />
       </section>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };
