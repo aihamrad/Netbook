@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {Arrow} from "../../assets/dynamIcIcons";
 import Button from "../Button";
 import SearchInput from "../SearchInput";
@@ -12,13 +12,13 @@ const ButtonsList = [
 ];
 
 const Navbar = () => {
-  const [page, setPage] = useState("Home");
+  const page = "Home";
 
   const buttonsRender = (item) => {
     if (item.type === "dropdown") {
       return (
         <div className="flex items-center">
-          <span className="mr-4">{item.text}</span> <Arrow />
+          <span className="mr-1">{item.text}</span> <Arrow />
         </div>
       );
     }
