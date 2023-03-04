@@ -1,0 +1,12 @@
+.container {
+  margin: 0 auto;
+  width: 80%;
+  @include respond(lg) {
+    width: 90%;
+  }
+
+  @include respond(md) {
+    width: 95%;
+    margin: 0 auto;
+  }
+}

@@ -1,11 +1,14 @@
-
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 // abstracts
-@import './abstracts/variables';
-@import './abstracts/mixins';
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
 
 // components
-@import './components/main';
+@import "./components/main";
+@import "./components/helper";
+@import "./components/button";
+@import "./components/typography";
+@import "./components/container";

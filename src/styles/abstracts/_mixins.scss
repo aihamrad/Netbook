@@ -1,0 +1,52 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: 640px) {
+      @content;
+    }
+  }
+  @if $breakpoint == md {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == lg {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+  @if $breakpoint == xl {
+    @media (max-width: 1280px) {
+      @content;
+    }
+  }
+  @if $breakpoint == 2xl {
+    @media (max-width: 1536px) {
+      @content;
+    }
+  }
+}
+
+@mixin scrollbars(
+  $size,
+  $foreground-color,
+  $background-color: mix($foreground-color, white, 50%)
+) {
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}

@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@600&display=swap");
+
+//border
+
+.b {
+  &-bottom-secondry {
+    border-bottom: 1px solid $color-secondry;
+  }
+}
+
+// background color
+
+.background {
+  &-secondry {
+    background-color: $color-secondry;
+  }
+
+  &-white {
+    background-color: $color-white;
+  }
+
+  &-black {
+    background-color: $color-text-black;
+  }
+
+  &-dark-grey {
+    background-color: $color-dark-grey;
+  }
+
+  &-header {
+    background: linear-gradient(311.76deg, #d4e7fe -15.24%, #ffffff 78.85%);
+  }
+}
+
+.header-img {
+  @include respond(xlg) {
+    width: 400px;
+  }
+  @include respond(lg) {
+    width: 300px;
+  }
+  @include respond(md) {
+    display: none;
+  }
+}
+
+.search-input {
+  border-bottom: 1px solid #e5e5e5;
+  svg {
+    path {
+      stroke: $color-light-grey;
+    }
+  }
+  &:hover {
+    svg {
+      path {
+        stroke: $color-dark-grey;
+      }
+    }
+  }
+
+  input {
+    background-color: transparent;
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  background-color: $color-white;
+  border-radius: 100%;
+  width: 44px;
+  height: 44px;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+  }
+}
+
+.custom {
+  &-dot {
+    width: 18px;
+    height: 18px;
+    padding: 1px;
+    border-radius: 100%;
+    background-color: $color-secondry;
+  }
+  &-dot2 {
+    content: " ";
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: $color-primary;
+  }
+}
+
+.shadow {
+  box-shadow: 0px 26px 49px rgba(146, 165, 184, 0.14);
+}
+
+.border {
+  &-grey {
+    border: 1px solid $color-light-grey;
+  }
+}
+.box {
+  &-s {
+    max-width: 336px;
+  }
+
+  &-m {
+    width: 381px;
+  }
+}
+
+// width
+.w {
+  &-100 {
+    width: 100%;
+  }
+}
+
+// small circle imgs on achivment section
+
+.img-list {
+  img {
+    box-sizing: border-box;
+    width: 23px;
+    height: 23px;
+    border: 2px solid white;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: -5px 4px 14px rgba(151, 151, 151, 0.28);
+  }
+  &:not(:first-child) {
+    margin-left: -7px;
+  }
+}
+
+// subscriibe input in the footer
+
+.subscribe-input {
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  border: 1px solid #ffffffd9;
+  justify-content: space-between;
+  input {
+    padding: 16px 24px;
+    background: transparent;
+    &:focus-visible {
+      outline: none;
+    }
+    @include respond(md) {
+      padding: 16px 10px;
+    }
+  }
+}
+
+// social media in the footer
+.social-media {
+  width: 36px;
+  height: 36px;
+  background-color: $color-white;
+  border-radius: 100%;
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+  &:hover {
+    background-color: $color-primary;
+    svg {
+      path {
+        fill: $color-white;
+      }
+    }
+  }
+}

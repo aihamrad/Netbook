@@ -1,0 +1,55 @@
+.button {
+  border-radius: 14px;
+  padding: 18px 45px;
+
+  @include respond(md) {
+    width: 100%;
+    padding: 10px 0px;
+  }
+  &:hover {
+    background-color: $color-secondry;
+  }
+
+  &-primary {
+    color: $color-white;
+    background: $color-primary;
+    border: 1px solid $color-primary;
+    box-shadow: 0px 7px 22px -6px rgba(33, 123, 244, 0.34);
+    &:hover {
+      background: $color-secondry;
+      color: $color-primary;
+      border: 1px solid $color-primary;
+      svg {
+        path {
+          stroke: $color-primary;
+        }
+      }
+    }
+  }
+
+  &-secondry {
+    background: transparent;
+    color: $color-primary;
+    border: 1px solid $color-primary;
+    &:hover {
+      color: $color-primary;
+      background: $color-secondry;
+      border: 1px solid $color-primary;
+      svg {
+        path {
+          stroke: $color-primary;
+        }
+      }
+    }
+  }
+
+  &-subscribe {
+    padding: 16px 24px;
+    background-color: #ffffffd9;
+    color: $color-dark-blue;
+    border-radius: 12px 0 0 12px;
+    @include respond(md) {
+      padding: 16px 10px;
+    }
+  }
+}

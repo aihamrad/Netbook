@@ -27,7 +27,7 @@ const Navbar = () => {
 
 
   return (
-    <div className={`w-100 b-bottom-secondry navbar`}>
+    <div className='b-bottom-secondry navbar'>
       <div className="container flex justify-between py-4 max-md:flex-col max-md:py-1">
         <div className="flex justify-start items-center  max-md:flex-col  max-md:justify-center max-md:w-[100%]">
             <div className="mr-20  max-md:mb-4 max-md:mr-0">

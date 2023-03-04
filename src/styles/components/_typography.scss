@@ -1,0 +1,59 @@
+// color color
+.text {
+  &-black {
+    color: $color-text-black;
+  }
+
+  &-white {
+    color: $color-white;
+  }
+
+  &-grey {
+    color: $color-text-grey;
+  }
+
+  &-primary {
+    color: $color-primary;
+  }
+
+  &-dark-blue {
+    color: $color-dark-blue;
+  }
+  &-link-grey {
+    color: $color-link-grey;
+  }
+  &-light-grey-2 {
+    color: $color-light-grey-2;
+  }
+  &-m-grey {
+    color: $color-m-grey;
+  }
+  &-dark-grey-2 {
+    color: $color-dark-grey-2;
+  }
+}
+
+// text size
+
+.text {
+  &-56 {
+    font-size: 56px;
+    line-height: 66px;
+    @include respond(md) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+  &-36 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+
+// font family
+
+.font {
+  &-poppins {
+    font-family: "Poppins";
+  }
+}
