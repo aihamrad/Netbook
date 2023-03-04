@@ -38,11 +38,12 @@
 
   &::-webkit-scrollbar-thumb {
     background: $foreground-color;
-    border-radius: 5px;
+    border-radius: 12px;
   }
 
   &::-webkit-scrollbar-track {
     background: $background-color;
+    border-radius: 12px;
   }
 
   & {

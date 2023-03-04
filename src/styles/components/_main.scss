@@ -1,9 +1,11 @@
 *,
 *::after,
-*::before {
+*::before,
+html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  scroll-behavior: smooth;
 }
 
 body {

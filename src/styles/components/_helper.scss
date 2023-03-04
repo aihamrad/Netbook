@@ -191,3 +191,24 @@
     }
   }
 }
+
+.highlight {
+  background-color: $color-yellow;
+  color: $color-dark-blue !important;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.search-box {
+  top: 100%;
+  max-height: 300px;
+  border-radius: 12px;
+  overflow-y: scroll;
+  @include scrollbars(1px, $color-primary, transparent);
+  div {
+    &:hover {
+      background-color: $color-secondry;
+      cursor: pointer;
+    }
+  }
+}

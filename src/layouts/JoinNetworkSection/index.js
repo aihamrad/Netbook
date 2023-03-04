@@ -9,7 +9,7 @@ const JoinNetworkSection = () => {
     <div className="container">
       <div className="py-20 flex justify-between items-center max-md:flex-col max-md:py-5">
         <div>
-          <p className="text-primary mb-2.5">Whats Netbboks?</p>
+          <p className="text-primary mb-2.5">Whats Netbooks?</p>
           <p className="mb-4 text-dark-blue text-36 font-bold">
             Why Join to Netbook <br /> Social Network?
           </p>

@@ -8,9 +8,11 @@ import AchievementSection from "./layouts/AchievementSection";
 import ContactUsSection from "./layouts/ContactUsSection";
 import Footer from "./layouts/Footer";
 
+import { SearchProvider } from "./store/SearchContext";
+
 const App = () => {
   return (
-    <div>
+    <SearchProvider>
       <section className="background-header">
         <Navbar />
         <HeaderSection />
@@ -27,7 +29,7 @@ const App = () => {
       <footer>
         <Footer />
       </footer>
-    </div>
+    </SearchProvider>
   );
 };
 
