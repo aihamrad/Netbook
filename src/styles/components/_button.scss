@@ -23,7 +23,6 @@
     &:hover :not(:disabled) {
       background: $color-secondry;
       color: $color-primary;
-      border: 1px solid $color-primary;
       svg {
         path {
           stroke: $color-primary;
