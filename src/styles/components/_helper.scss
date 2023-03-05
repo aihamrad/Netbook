@@ -30,6 +30,12 @@
   }
 }
 
+.top {
+  &-60 {
+    top: 60%;
+  }
+}
+
 .header-img {
   @include respond(xlg) {
     width: 400px;

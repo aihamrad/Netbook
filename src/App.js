@@ -1,6 +1,7 @@
 import React from "react";
 
 import Navbar from "./components/Navbar";
+import ShareLinks from "./components/ShareLinks";
 
 import HeaderSection from "./layouts/HeaderSection";
 import JoinNetworkSection from "./layouts/JoinNetworkSection";
@@ -13,6 +14,7 @@ import { SearchProvider } from "./store/SearchContext";
 const App = () => {
   return (
     <SearchProvider>
+      <ShareLinks />
       <section className="background-header">
         <Navbar />
         <HeaderSection />
