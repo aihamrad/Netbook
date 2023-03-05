@@ -8,7 +8,7 @@ describe("Logo", () => {
     const color = "blue";
     render(<Logo color={color} />);
     const logoImage = screen.getByAltText("logo");
-    const logoText = screen.getByText("Netbook");
+    const logoText = screen.getByTestId("netbook");
     expect(logoImage).toBeInTheDocument();
     expect(logoText).toBeInTheDocument();
     expect(logoText).toHaveClass(`text-${color}`);

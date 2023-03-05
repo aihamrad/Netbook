@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import ContactForm from "../../components/ContactusForm";
+import { ContentContext } from "../../store/ContentContext";
 import emailjsHandler from "../../utils/emailjsHandler";
 
 const ContactUsSection = () => {
+  const { contents } = useContext(ContentContext);
+  const section = contents?.section4
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -31,6 +34,9 @@ const ContactUsSection = () => {
       <div className="container">
         <div className="py-20 flex justify-center max-md:py-5">
           <div className="contact-form p-11 box-m shadow background-white rounded-xl ">
+            <p className="text-center mb-5 text-dark-blue text-semibold text-lg">
+              {section?.title}
+            </p>
             {!alreadySent ? (
               <ContactForm
                 handleSubmit={handleSubmit}

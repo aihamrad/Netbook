@@ -12,9 +12,6 @@ const ContactForm = ({
 }) => {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col justify-center">
-      <p className="text-center mb-5 text-dark-blue text-semibold text-lg">
-        Please if you have any question <br /> Contact us
-      </p>
       <input
         type="text"
         required

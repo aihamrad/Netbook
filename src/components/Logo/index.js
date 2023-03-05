@@ -1,13 +1,17 @@
-import logo from "../../assets/imgs/netbookLogo.svg";
+import { useContext } from "react";
+import { ContentContext } from "../../store/ContentContext";
 
 const Logo = ({ color }) => {
+  const { contents } = useContext(ContentContext);
+  const content = contents?.public
   return (
     <div className="flex justify-start items-center">
-      <img src={logo} className="pr-1" alt="logo" />
+      <img src={content?.logo} className="pr-1" alt="logo" />
       <span
+        data-testid='netbook'
         className={`font-poppins font-semibold leading-6 text-2xl text-${color}`}
       >
-        Netbook
+        {content?.name}
       </span>
     </div>
   );

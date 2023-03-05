@@ -6,14 +6,30 @@ import {
   LinkedIn,
 } from "../../assets/dynamIcIcons/";
 import Button from "../../components/Button";
+import { useContext } from "react";
+import { ContentContext } from "../../store/ContentContext";
 
 const Footer = () => {
+  const { contents } = useContext(ContentContext);
+  const footerContent = contents?.footer
+
   const socialLinks = [
     { link: "/#", icon: <Twitter />, id: "twitter" },
     { link: "/#", icon: <Instagram />, id: "instagram" },
     { link: "/#", icon: <Facebook />, id: "facebook" },
     { link: "/#", icon: <LinkedIn />, id: "linkedIn" },
   ];
+  const tableRowRender = (row) => {
+    return row?.map((el) => (
+      <td
+        key={el}
+        className="text-center text-light-grey-2 pb-3 max-md:text-sm"
+      >
+        <a href="/#"><span>{el}</span></a>
+      </td>
+    ))
+  }
+
   return (
     <div className="background-black text-white">
       <div className="container">
@@ -31,57 +47,35 @@ const Footer = () => {
               </thead>
               <tbody>
                 <tr>
-                  {["Home", "Blog", "NewsFeed", "Members"].map((el) => (
-                    <td
-                      key={el}
-                      className="text-center text-light-grey-2 pb-3 max-md:text-sm"
-                    >
-                      <a href="/#"><span>{el}</span></a>
-                    </td>
-                  ))}
+                  {tableRowRender(footerContent?.row1)}
                 </tr>
                 <tr>
-                  {["Community", "News", "Profile", "Activity"].map((el) => (
-                    <td key={el} className="text-center pb-3 max-md:text-sm">
-                      <a href="/#">{el}</a>
-                    </td>
-                  ))}
+                  {tableRowRender(footerContent?.row2)}
                 </tr>
                 <tr>
-                  {["Events", "Guides", "Friends", "Groups"].map((el) => (
-                    <td key={el} className="text-center pb-3 max-md:text-sm">
-                     <a href="/#"><span>{el}</span></a>
-                    </td>
-                  ))}
+                {tableRowRender(footerContent?.row3)}
                 </tr>
                 <tr>
-                  {["Contact", "Help Center", "Forums", "Private Group"].map(
-                    (el) => (
-                      <td key={el} className="text-center max-md:text-sm">
-                        <a href="/#"><span>{el}</span></a>
-                      </td>
-                    )
-                  )}
+                {tableRowRender(footerContent?.row4)}
                 </tr>
               </tbody>
             </table>
           </div>
           <div>
-            <p className="text-xl mb-4">Subscribe Cirkle Newsletter</p>
+            <p className="text-xl mb-4">{footerContent?.title}</p>
             <p className="text-light-grey-2 mb-8 max-md:text-sm">
-              Subscribe to be the first one to know about updates. Enter your
-              email
+              {footerContent?.text}
             </p>
             <div className="subscribe-input">
               <input type="text" placeholder="Email Address" />
-              <Button className="button-subscribe">Subscribe</Button>
+              <Button className="button-subscribe">{footerContent?.btn}</Button>
             </div>
           </div>
         </div>
       </div>
       <div className="background-dark-grey">
         <div className="container py-10 flex justify-between items-center max-md:flex-col">
-          <p className="max:md:mb-1">Besnik Creative Agency.</p>
+          <p className="max:md:mb-1">{footerContent?.hint}</p>
           <Logo color="white" />
           <div className="flex max-md:mt-1">
             {socialLinks.map((el) => (

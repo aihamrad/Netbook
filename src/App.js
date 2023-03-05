@@ -10,28 +10,34 @@ import ContactUsSection from "./layouts/ContactUsSection";
 import Footer from "./layouts/Footer";
 
 import { SearchProvider } from "./store/SearchContext";
+import { ContentProvider } from "./store/ContentContext";
 
 const App = () => {
+
   return (
-    <SearchProvider>
-      <ShareLinks />
-      <section className="background-header">
-        <Navbar />
-        <HeaderSection />
-      </section>
-      <section>
-        <JoinNetworkSection />
-      </section>
-      <section>
-        <AchievementSection />
-      </section>
-      <section>
-        <ContactUsSection />
-      </section>
-      <footer>
-        <Footer />
-      </footer>
-    </SearchProvider>
+    <>
+    <ContentProvider>
+      <SearchProvider>
+        <ShareLinks />
+        <section className="background-header">
+          <Navbar />
+          <HeaderSection />
+        </section>
+        <section>
+          <JoinNetworkSection />
+        </section>
+        <section>
+          <AchievementSection />
+        </section>
+        <section>
+          <ContactUsSection />
+        </section>
+        <footer>
+          <Footer />
+        </footer>
+      </SearchProvider>
+    </ContentProvider>
+    </>
   );
 };
 

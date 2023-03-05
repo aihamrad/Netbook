@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+const { createContext, useEffect, useState } = require("react");
 
 export const SearchContext = createContext({
   query: "",
