@@ -39,8 +39,9 @@ const SearchInput = () => {
     return results;
   };
 
-  const handleLinkClick = (el) => {
+  const handleLinkClick = (el, index) => {
     el.classList.add("highlight");
+    document.getElementById(`result-${index}`).scrollIntoView();
     setTimeout(() => {
       el.classList.remove("highlight");
       setSearchResultShow(false);
@@ -72,12 +73,9 @@ const SearchInput = () => {
           {resultsNotEmpty ? (
             results.map((el, index) => (
               <div key={index} className="b-bottom-secondry p-2 text-xs">
-                <a
-                  onClick={() => handleLinkClick(el.el)}
-                  href={`#result-${index}`}
-                >
+                <div onClick={() => handleLinkClick(el.el, index)}>
                   {el.text}
-                </a>
+                </div>
               </div>
             ))
           ) : (
