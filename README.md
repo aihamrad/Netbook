@@ -30,6 +30,12 @@ Once the installation is complete, run the command `npm start` to start the deve
 - emailjs-com
 - jest
 
+
+### contentful CMS
+
+the content has been integrated with contentful CMS, in the link below you can preview the content
+- [Contentful preview link](https://discovery.contentful.com/entries/by-content-type/contents-data/5cSVru9JZ5bFyBNbLvvjfI?preview=true&preview_access_token=YpSCi17G3S3y0CxsUGpbguz0ZBG9k_yK9jMhR438NQ4&space_id=7xlqtfiem5zd)
+
 ### additional features
 
 - contact form
