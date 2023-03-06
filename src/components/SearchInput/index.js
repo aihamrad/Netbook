@@ -53,7 +53,7 @@ const SearchInput = () => {
   const resultsNotEmpty = results.length > 0;
   const emptyResultsMessage = query
     ? "Not found any try another thing"
-    : "Search results will appear here"
+    : "Search results will appear here";
 
   return (
     <div className="search-input text-grey mr-5 flex items-center pb-4 relative">

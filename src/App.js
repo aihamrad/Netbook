@@ -13,9 +13,7 @@ import { SearchProvider } from "./store/SearchContext";
 import { ContentProvider } from "./store/ContentContext";
 
 const App = () => {
-
   return (
-    <>
     <ContentProvider>
       <SearchProvider>
         <ShareLinks />
@@ -37,7 +35,6 @@ const App = () => {
         </footer>
       </SearchProvider>
     </ContentProvider>
-    </>
   );
 };
 
