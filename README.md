@@ -17,7 +17,7 @@ Once the installation is complete, run the command `npm start` to start the deve
 
 
 ## cloud service
-  netlify for cloud server for hosting
+  Netlify cloud server for hosting
 - [Link](https://netbook-test.netlify.app)
 
 
@@ -29,20 +29,21 @@ Once the installation is complete, run the command `npm start` to start the deve
 - Tailwind CSS
 - emailjs-com
 - jest
+- contentful
 
 
 ### contentful CMS
 
-the content has been integrated with contentful CMS, in the link below you can preview the content
+The content has been integrated with contentful CMS, in the link below you can preview the content
 - [Contentful preview link](https://discovery.contentful.com/entries/by-content-type/contents-data/5cSVru9JZ5bFyBNbLvvjfI?preview=true&preview_access_token=YpSCi17G3S3y0CxsUGpbguz0ZBG9k_yK9jMhR438NQ4&space_id=7xlqtfiem5zd)
 
 ### additional features
 
-- contact form
+- Contact form
     
-- search bar
+- Search bar
 
-- social media sharing buttons
+- Social media sharing buttons
 
-- animations
+- Animations
 
