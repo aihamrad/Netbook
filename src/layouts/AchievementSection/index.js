@@ -83,7 +83,7 @@ const AchievementSection = () => {
           <p className="mb-2.5 text-primary text-lg">{box3?.hint}</p>
           <p className="mb-4 text-dark-blue text-36 font-bold">{box3?.title}</p>
           <p className="mb-9 text-base text-grey">{box3?.text}</p>
-          <Button className="button button-primary">
+          <Button className="button button-primary p-1">
             <div className="flex justify-center items-center">
               <span className="mr-1">{box3?.btnText}</span>
               <ArrowRight color={"#fff"} />
